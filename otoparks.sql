@@ -11,7 +11,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -37,7 +36,7 @@ CREATE TABLE `ayarlar` (
 --
 
 INSERT INTO `ayarlar` (`otoparkAdi`, `saatlikUcret`) VALUES
-('BEKTAŞ OTOPARK', 43);
+('YENİ OTOPARK', 50);
 
 -- --------------------------------------------------------
 
@@ -55,8 +54,8 @@ CREATE TABLE `duyurular` (
 --
 
 INSERT INTO `duyurular` (`id`, `duyuru`) VALUES
-(4, 'Otoparkımız sayın Recep Tayyip Erdoğan\'ın teşrifleriyle 24.04.2024 tarihinde açılacaktır.'),
-(5, 'İyi eğlenceler.');
+(4, 'Otoparkımız 01.05.2024 tarihinde hizmete açılacaktır.'),
+(5, 'Keyifli park deneyimi dileriz.');
 
 -- --------------------------------------------------------
 
@@ -77,8 +76,8 @@ CREATE TABLE `kartlar` (
 --
 
 INSERT INTO `kartlar` (`id`, `kart`, `skt`, `ad`, `cvv`) VALUES
-(12, '1111 1111 1111 1111', '11', 'abbas', '555'),
-(13, '4125 6376 5228 1186', '12/Sy', 'MUHAMMET UMUT ALTUN', '174');
+(12, '4321 8765 1234 5678', '09/28', 'AYŞE YILMAZ', '321'),
+(13, '9876 5432 6789 1234', '03/27', '', '789');
 
 -- --------------------------------------------------------
 
@@ -98,8 +97,8 @@ CREATE TABLE `kullanicilar` (
 --
 
 INSERT INTO `kullanicilar` (`id`, `kullanici`, `sifre`, `tur`) VALUES
-(1, 'foaqen', '1234', 'admin'),
-(2, 'n1rvana', '5555', 'admin');
+(1, 'kullanici1', '9876', 'admin'),
+(2, 'kullanici2', '12345', 'admin');
 
 -- --------------------------------------------------------
 
@@ -125,13 +124,13 @@ CREATE TABLE `musteriler` (
 --
 
 INSERT INTO `musteriler` (`plaka`, `parkYeri`, `ad`, `soyad`, `telNo`, `tcNo`, `giris`, `girisSaat`, `cikis`, `cikisSaat`) VALUES
-('05TC05', 'A5', 'ASLAN', 'AKBEY', '+90 (555) 555 55 55', '11111111111', '2024-04-30', '08:30:00', '2024-04-30', '12:05:00'),
-('16ALE09', 'B5', 'AHMET', 'DEMİR', '+90 (555) 555 55 55', '11111111110', '2024-04-03', '05:30:00', '2024-04-30', '12:05:00'),
-('21TEM06', 'A2', 'MAHMUT', 'YILDIRIM', '+90 (555) 555 55 55', '11111111110', '2024-04-19', '08:30:00', '2024-04-30', '12:05:00'),
-('34EFE34', 'A1', 'MEHMET', 'KARAHANLI', '+90 (555) 555 55 55', '11111111110', '2024-04-01', '08:30:00', '2024-04-30', '12:05:00'),
-('34PLT34', 'B1', 'ALİ', 'CANDAN', '+90 (555) 555 55 55', '11111111110', '2024-04-11', '03:50:00', '2024-04-30', '12:05:00'),
-('41ALE734', 'A5', 'SELİM', 'BEKTAŞ', '+90 (555) 555 55 55', '11111111111', '2024-04-29', '10:00:00', '2024-04-30', '08:00:00'),
-('61LJ25', 'B9', 'MUHAMMET UMUT', 'ALTUN', '+90 (555) 555 55 55', '38923123124', '2024-04-28', '23:30:00', '2024-04-29', '12:30:00');
+('06XYZ12', 'C1', 'FATMA', 'KAYA', '+90 (532) 123 45 67', '98765432101', '2024-05-01', '09:15:00', '2024-05-01', '14:20:00'),
+('35ABC78', 'B2', 'MURAT', 'ÖZDEMİR', '+90 (532) 987 65 43', '12345678901', '2024-04-05', '06:45:00', '2024-05-01', '13:10:00'),
+('07DEF45', 'A3', 'AYLİN', 'ÇELİK', '+90 (532) 456 78 90', '45678912345', '2024-04-20', '07:00:00', '2024-05-01', '11:30:00'),
+('34GHJ56', 'A4', 'EMRE', 'YILMAZ', '+90 (532) 321 54 76', '78912345678', '2024-04-02', '10:20:00', '2024-05-01', '15:40:00'),
+('16KLM89', 'B3', 'SERKAN', 'AKTAŞ', '+90 (532) 654 32 10', '32165498701', '2024-04-12', '04:15:00', '2024-05-01', '12:00:00'),
+('41NOP23', 'A6', 'Zeynep', 'ŞAHİN', '+90 (532) 789 12 34', '65432198701', '2024-04-28', '11:30:00', '2024-05-01', '09:00:00'),
+('01QRS67', 'B8', 'CAN', 'ERDOĞAN', '+90 (532) 147 25 36', '14725836901', '2024-0427', '22:00:00', '2024-04-28', '13:45:00');
 
 --
 -- Indexes for dumped tables
